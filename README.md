@@ -46,3 +46,4 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 # diary_demo
 # diary_private
+# diary_private
