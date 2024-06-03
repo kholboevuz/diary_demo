@@ -1,0 +1,42 @@
+<script src="https://cdn.tiny.cloud/1/ukaq86gtfx1m0o3nzhbqmpju6gpxhyi4uy0z767kf6v5qyo3/tinymce/7/tinymce.min.js"
+	referrerpolicy="origin"></script>
+<style>
+	.footer {
+		display: none;
+	}
+</style>
+
+<script>
+	tinymce.init({
+		selector: 'textarea',
+		plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
+		toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+	});
+</script>
+<h4 class="bg-black p-3 text-white font-bold text-center">Maqolani Qo'shish</h4>
+<div class="card" style="width:70%; margin:auto">
+	<form class="p-4" method="post" action="/api/add" enctype="multipart/form-data">
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Maqola nomi</label>
+			<input type="text" name="diary_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Maqola surati</label>
+			<input type="file" class="form-control" name="files" id="exampleInputEmail1" aria-describedby="emailHelp"
+				accept=".img, .jpeg, .png, .jpg">
+			<div id="emailHelp" class="form-text text-danger">Maqola surati (.img, .png, .jpeg bolishi kerak).</div>
+		</div>
+		<div class="mb-3">
+			<textarea class="form-control" name="diary_desc">
+
+</textarea>
+		</div>
+		<div class="mb-3 form-check">
+			<input type="checkbox" class="form-check-input" required id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Ma'lumotlarni tasdqilash</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Chop etish</button>
+	</form>
+
+</div>

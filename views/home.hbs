@@ -1,0 +1,27 @@
+<h1 class="text-center bg-black text-white font-bold p-3">Maqolalar</h1>
+
+<div class="container row w-80 m-auto">
+	{{#if diaryData}}
+	{{#each diaryData }}
+	<div class="card m-5" style="width: 18rem;">
+		<img src="./uploads/{{file_name}}" class="card-img-top" alt="...">
+		<div class="card-body">
+			<div class="justify-content-between">
+				<span class="text-info"><i class="fa fa-clock"></i> {{datatime}}</span>
+
+				<p class="card-text p-3">{{diary_name}}</p>
+
+				<button type="button" class="btn btn-warning"><a href="/post?_id={{_id}}"
+						class="text-decoration-none text-black"><i class="fa fa-eye"></i>
+						Ko'rish</a></button>
+
+			</div>
+		</div>
+	</div>
+	{{/each}}
+	{{else}}
+
+	<h3 class="text-center p-5 font-bold text-danger">Post mavjud emas</h3>
+
+	{{/if}}
+</div>

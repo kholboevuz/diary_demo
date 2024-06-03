@@ -1,0 +1,30 @@
+<h1 class="text-center bg-black text-white font-bold p-3">Mening kundaliklarim</h1>
+<div class="container row w-80 m-auto">
+	{{#if diaryData}}
+	{{#each diaryData}}
+	<div class="card m-5" style="width: 30rem;">
+		<img src="./uploads/{{file_name}}" class="card-img-top" alt="...">
+		<div class="card-body">
+			<div class="d-flex justify-content-between">
+				<span class="text-info"><i class="fa fa-clock"></i> {{datatime}}</span>
+			</div>
+			<br>
+			<p class="card-text">{{diary_name}}</p>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn btn-primary"><a href="/post?_id={{_id}}"
+						class="text-decoration-none text-white"><i class="fa fa-eye"></i>
+						Ko'rish</a></button>
+				<a href="/edit?_id={{_id}}"><button type="button" class="btn btn-warning"><i class="fa-solid fa-edit"></i>
+						Tahrirlash</button></a>
+				<a href="/api/delete?_id={{_id}}"><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i>
+						O'chirish</button>
+				</a>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+	{{else}}
+	<h3 class="text-center p-5 font-bold text-danger">Post mavjud emas</h3>
+	{{/if}}
+
+</div>

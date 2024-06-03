@@ -1,0 +1,24 @@
+{
+	"name": "my-diary",
+	"version": "1.0.0",
+	"description": "Kundalik loyihasi",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon app"
+	},
+	"author": "Sevinchbek Kholboev",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"express-fileupload": "^1.5.0",
+		"express-handlebars": "^7.1.2",
+		"express-session": "^1.18.0",
+		"jsonwebtoken": "^9.0.2",
+		"moment-timezone": "^0.5.45",
+		"mongoose": "^8.4.1",
+		"nodemon": "^3.1.2"
+	}
+}

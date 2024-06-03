@@ -1,0 +1,28 @@
+<style>
+	.footer {
+		display: none;
+	}
+</style>
+<br><br>
+<div class="card w-50 m-auto ">
+	<form class="p-5 " method="POST" action="/api/register">
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">To'liq ismingiz</label>
+			<input type="text" class="form-control" name="fullname" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Email</label>
+			<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+		</div>
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Parol</label>
+			<input type="password" class="form-control" name="password" id="exampleInputPassword1">
+		</div>
+
+		<button type="submit" class="btn btn-primary">Ro'yxatdan o'tish</button>
+		<br><br>
+		<a href="/login"> Sizda hisob mavjudmi?</a>
+	</form>
+</div>

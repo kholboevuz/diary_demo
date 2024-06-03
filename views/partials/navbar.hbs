@@ -1,0 +1,41 @@
+<nav class="navbar bg-body-tertiary">
+	<div class="container">
+		<a class="navbar-brand" href="#">
+			<img src="https://seeklogo.com/images/T/twitter-x-logo-0339F999CF-seeklogo.com.png?v=638264860180000000"
+				alt="Bootstrap" width="60">
+		</a>
+
+		<div class="d-flex align-items-center gap-5">
+			<a class="nav-link active" aria-current="page" href="/">Asosiy</a>
+			{{#if sessData}}
+			<a class="nav-link" href="/my-diary">Mening kundaliklarim</a>
+			{{else}}
+			<div>
+				<a href="/login"><button class="btn btn-success">Kirish</button></a>
+				<a href="/register"><button class="btn btn-warning">Ro'yxatdan o'tish</button></a>
+			</div>
+
+			{{/if}}
+
+
+
+			<!-- Example single danger button -->
+			{{#if sessData}}
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					{{data.fullname}}
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="/my-diary">Mening maqolalarim</a></li>
+					<li><a class="dropdown-item" href="/add-post">Maqola chop etish</a></li>
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+					<li><a class="dropdown-item" href="/api/logout">Chiqish</a></li>
+				</ul>
+			</div>
+			{{/if}}
+		</div>
+
+	</div>
+</nav>

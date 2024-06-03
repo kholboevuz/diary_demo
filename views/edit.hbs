@@ -1,0 +1,34 @@
+<script src="https://cdn.tiny.cloud/1/ukaq86gtfx1m0o3nzhbqmpju6gpxhyi4uy0z767kf6v5qyo3/tinymce/7/tinymce.min.js"
+	referrerpolicy="origin"></script>
+<style>
+	.footer {
+		display: none;
+	}
+</style>
+
+<script>
+	tinymce.init({
+		selector: 'textarea',
+		plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
+		toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+	});
+</script>
+<h4 class="bg-black p-3 text-white font-bold text-center">Maqolani tahrirlash</h4>
+<div class="w-60 m-auto">
+
+	<form class="p-4" method="post" action="/api/edit" enctype="multipart/form-data">
+
+
+		<div class="mb-3">
+			<textarea class="form-control" name="diary_desc">
+				{{{diary_desc}}}
+</textarea>
+			<input type="hidden" name="_id" value="{{_id}}">
+		</div>
+		<div class="mb-3 form-check">
+			<input type="checkbox" class="form-check-input" required id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Ma'lumotlarni tasdqilash</label>
+		</div>
+		<button type="submit" class="btn btn-success">Yangilash</button>
+	</form>
+</div>
